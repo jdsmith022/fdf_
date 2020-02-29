@@ -51,6 +51,8 @@ If incorrect parameters are given or the map is invalid, a usage error will be g
 fractol.fdf:
 ![fractol.fdf](https://github.com/jdsmith022/fdf_/blob/master/pictures/fractal.png)
 
+42.fdf:
+![42.fdf](https://github.com/jdsmith022/fdf_/blob/master/pictures/42.png)
 
 To delete all object files from directory, run:
 ```
