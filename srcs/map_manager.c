@@ -6,7 +6,7 @@
 /*   By: jesmith <jesmith@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/03 14:40:17 by jesmith        #+#    #+#                */
-/*   Updated: 2019/12/24 10:33:34 by mminkjan      ########   odam.nl         */
+/*   Updated: 2020/02/29 18:05:01 by jesmith       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,17 @@ static void			print_lines(t_fdf *fdf)
 	}
 }
 
-int					map_manager(t_fdf *fdf)
+static void			mlx_hooks(t_fdf *fdf)
 {
 	mlx_hook(fdf->window_ptr, 2, 0, key_press, fdf);
 	mlx_hook(fdf->window_ptr, 4, 0, mouse_press, fdf);
 	mlx_hook(fdf->window_ptr, 5, 0, mouse_release, fdf);
 	mlx_hook(fdf->window_ptr, 6, 0, mouse_move, fdf);
+}
+
+int					map_manager(t_fdf *fdf)
+{
+	mlx_hooks(fdf);
 	print_lines(fdf);
 	mlx_put_image_to_window(fdf->mlx_ptr,
 		fdf->window_ptr, fdf->image_ptr, 400, 0);

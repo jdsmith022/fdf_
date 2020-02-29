@@ -6,7 +6,7 @@
 #    By: mminkjan <mminkjan@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/06/05 15:48:04 by mminkjan       #+#    #+#                 #
-#    Updated: 2019/12/23 20:28:36 by mminkjan      ########   odam.nl          #
+#    Updated: 2020/02/29 18:08:54 by jesmith       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ LIBFT = libft/
 
 SRCS = ./srcs/
 SRCS_FILE = main mlx_setup utilities import_map calculate_points map_manager \
-			events_input draw_line rotate_point calculate_color events \
-			user_interface list_utilities
+			mouse_events key_events events draw_line rotate_point \
+			calculate_color user_interface list_utilities
 
 CFILES =  $(SRCS_FILE:%=$(SRCS)%.c)
 

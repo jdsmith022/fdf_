@@ -6,27 +6,26 @@
 /*   By: mminkjan <mminkjan@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/02 16:02:56 by mminkjan       #+#    #+#                */
-/*   Updated: 2020/01/11 13:37:05 by jesmith       ########   odam.nl         */
+/*   Updated: 2020/02/29 18:04:30 by jesmith       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-static void	validate_argument(char *program, char *argument, t_fdf *fdf)
+static void	validate_argument(char *program, char *argument)
 {
 	if (ft_strcmp(program, argument) == 0 ||
 		ft_strcmp(&program[2], argument) == 0)
-		ft_exit(INVAL_ERR, 0, fdf);
+		ft_exit(INVAL_ERR, 0, NULL);
 }
 
 int			main(int argc, char **argv)
 {
 	t_fdf		*fdf;
 
-	fdf = NULL;
 	if (argc != 2)
-		ft_exit(USAGE_ERR, 0, fdf);
-	validate_argument(argv[0], argv[1], fdf);
+		ft_exit(USAGE_ERR, 0, NULL);
+	validate_argument(argv[0], argv[1]);
 	fdf = fdf_init();
 	fdf->map_name = ft_strdup(argv[1]);
 	mlx_setup(fdf);

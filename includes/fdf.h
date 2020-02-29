@@ -6,7 +6,7 @@
 /*   By: mminkjan <mminkjan@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/02 16:06:39 by mminkjan       #+#    #+#                */
-/*   Updated: 2020/01/11 13:28:06 by jesmith       ########   odam.nl         */
+/*   Updated: 2020/02/29 18:07:52 by jesmith       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@
 # define FOUR 21
 # define FIVE 23
 # define ZERO 29
+
+# define SCROLL_UP 5
+# define SCROLL_DOWN 4
+# define MOUSE_PRESS 1
 
 # define ONE_START 0x8A2387
 # define ONE_MIDDLE 0xE94057
@@ -94,6 +98,8 @@ typedef struct			s_events
 	int					mouse_press;
 	double				move_x;
 	double				move_y;
+	double				hold_x;
+	double				hold_y;
 	double				zoom;
 }						t_events;
 
@@ -145,9 +151,11 @@ void					draw_line(t_fdf *fdf, t_points start, t_points end);
 int						get_color(t_fdf *fdf, double altitude);
 
 int						key_press(int key_code, t_fdf *fdf);
+
 int						mouse_release(int button, int x, int y, t_fdf *fdf);
 int						mouse_press(int button, int x, int y, t_fdf *fdf);
 int						mouse_move(int x, int y, t_fdf *fdf);
+int						close_window(t_fdf *fdf);
 
 void					ft_exit(char *str, int fd, t_fdf *fdf);
 t_fdf					*fdf_init(void);
