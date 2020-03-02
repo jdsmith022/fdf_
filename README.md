@@ -13,6 +13,7 @@ For full pdf of project requirements click [here](https://github.com/jdsmith022/
 ### Prerequities
 XQuartz
 To download click [here](https://www.xquartz.org/).
+This program complies with a Makefile. For Windows, user can download Cygwin [here](http://www.cygwin.com/) for functionality similar to Linus for Windows.
 
 ### Installation
 
@@ -24,10 +25,12 @@ $ git clone git@github.com:jdsmith022/fdf.git [directory-name]
 ```
 
 ### Usage
+
 In terminal, go into the project directory. This program uses a makefile to compile. To compile, run:
 ```
 $ make
 ```
+
 The executable name is fdf. A directory in the repository named maps has a list of landscape maps that can be used. To see names of maps available for use is maps directory of repository, from terminal and in git repository:
 ```
 $ ls -la maps/
