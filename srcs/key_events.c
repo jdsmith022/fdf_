@@ -6,7 +6,7 @@
 /*   By: jesmith <jesmith@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/29 18:06:22 by jesmith        #+#    #+#                */
-/*   Updated: 2020/02/29 18:06:56 by jesmith       ########   odam.nl         */
+/*   Updated: 2020/03/23 21:25:55 by JessicaSmit   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static void		key_press2(int key_code,
 	}
 	else if (key_code == ESC)
 	{
+		mlx_free(fdf);
 		free_structs(fdf);
 		exit(0);
 	}

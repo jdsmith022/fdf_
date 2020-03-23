@@ -6,7 +6,7 @@
 /*   By: mminkjan <mminkjan@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/02 16:06:39 by mminkjan       #+#    #+#                */
-/*   Updated: 2020/03/23 21:21:06 by JessicaSmit   ########   odam.nl         */
+/*   Updated: 2020/03/23 21:27:21 by JessicaSmit   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,6 +158,7 @@ int						mouse_move(int x, int y, t_fdf *fdf);
 int						close_window(t_fdf *fdf);
 
 void					ft_exit(char *str, int fd, t_fdf *fdf);
+void					mlx_free(t_fdf *fdf);
 
 t_fdf					*fdf_init(void);
 void					swap_points(t_points *a, t_points *b);
