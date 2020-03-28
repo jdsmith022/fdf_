@@ -6,11 +6,29 @@
 /*   By: mminkjan <mminkjan@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/09 16:20:17 by mminkjan       #+#    #+#                */
-/*   Updated: 2020/01/06 16:02:15 by jesmith       ########   odam.nl         */
+/*   Updated: 2020/03/28 12:01:50 by JessicaSmit   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+
+static double		percentage(t_fdf *fdf, double current)
+{
+	double placement;
+	double distance;
+
+	if (current < fdf->alt_mid)
+	{
+		placement = current - fdf->alt_min;
+		distance = fdf->alt_mid - fdf->alt_min;
+	}
+	else
+	{
+		placement = current - fdf->alt_mid;
+		distance = fdf->alt_max - fdf->alt_mid;
+	}
+	return ((distance == 0) ? 1.0 : (placement / distance));
+}
 
 static int			get_bit_value(int start, int end, double percentage)
 {

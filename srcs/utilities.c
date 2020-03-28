@@ -6,29 +6,11 @@
 /*   By: jesmith <jesmith@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/12/03 10:01:31 by jesmith        #+#    #+#                */
-/*   Updated: 2020/03/23 21:19:10 by JessicaSmit   ########   odam.nl         */
+/*   Updated: 2020/03/28 12:01:28 by JessicaSmit   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
-
-double			percentage(t_fdf *fdf, double current)
-{
-	double placement;
-	double distance;
-
-	if (current < fdf->alt_mid)
-	{
-		placement = current - fdf->alt_min;
-		distance = fdf->alt_mid - fdf->alt_min;
-	}
-	else
-	{
-		placement = current - fdf->alt_mid;
-		distance = fdf->alt_max - fdf->alt_mid;
-	}
-	return ((distance == 0) ? 1.0 : (placement / distance));
-}
 
 void			swap_points(t_points *a, t_points *b)
 {
