@@ -10,7 +10,7 @@ The objectives of this project are to discover the basics of graphic programming
 
 For full pdf of project requirements click [here](https://github.com/jdsmith022/fdf/blob/master/fdf.en.pdf).
 
-### Prerequities
+### Prerequsites
 XQuartz
 To download click [here](https://www.xquartz.org/).
 This program was written on LinuxOS and complies with a Makefile.
